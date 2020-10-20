@@ -210,9 +210,11 @@ public class SimpleDemo : MonoBehaviour
 				synth.SetOutputToDefaultAudioDevice();
 
 				synth.Speak("What is your favorite color?");*/
-
-				string sayAtStart = "Tell the material quantity to transfer";
-				Speech.instance.Say(sayAtStart, TTSCallback);
+				BarcodeScanner.Camera.Stop();
+				SceneManager.LoadScene("Input");
+				
+				/*string sayAtStart = "Tell the material quantity to transfer";
+				Speech.instance.Say(sayAtStart, TTSCallback);*/
 
 				var client = new RestClient("https://convergentis.prod.apimanagement.us10.hana.ondemand.com:443/GOODS_MOVEMENT_SRV/MaterialDocumentHeaderSet");
 				//client.Timeout = -1;

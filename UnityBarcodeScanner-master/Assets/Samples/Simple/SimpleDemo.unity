@@ -225,8 +225,8 @@ GameObject:
   - component: {fileID: 103870419}
   - component: {fileID: 103870417}
   - component: {fileID: 103870416}
-  - component: {fileID: 103870421}
   - component: {fileID: 103870422}
+  - component: {fileID: 103870418}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -250,6 +250,23 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103870415}
   m_Enabled: 1
+--- !u!114 &103870418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103870415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15827e56356d83b4fa3eba8af4d7d73e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextHeader: {fileID: 1184638579}
+  Image: {fileID: 570292425}
+  Audio: {fileID: 103870422}
+  m_Hypotheses: {fileID: 0}
+  m_Recognitions: {fileID: 0}
 --- !u!20 &103870419
 Camera:
   m_ObjectHideFlags: 0
@@ -308,23 +325,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &103870421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103870415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15827e56356d83b4fa3eba8af4d7d73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextHeader: {fileID: 1184638579}
-  Image: {fileID: 570292425}
-  Audio: {fileID: 103870422}
-  m_Hypotheses: {fileID: 0}
-  m_Recognitions: {fileID: 0}
 --- !u!82 &103870422
 AudioSource:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103870421}
+      - m_Target: {fileID: 103870418}
         m_MethodName: ClickBack
         m_Mode: 1
         m_Arguments:
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103870421}
+      - m_Target: {fileID: 103870418}
         m_MethodName: ClickStop
         m_Mode: 1
         m_Arguments:
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103870421}
+      - m_Target: {fileID: 103870418}
         m_MethodName: ClickStart
         m_Mode: 1
         m_Arguments:
@@ -1363,71 +1363,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729833441}
   m_CullTransparentMesh: 0
---- !u!1 &2051421210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2051421212}
-  - component: {fileID: 2051421211}
-  - component: {fileID: 2051421213}
-  m_Layer: 0
-  m_Name: '#SpechManager'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2051421211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051421210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c1c49422f351c47b4bf6943e656ac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voiceID: Tweaky
---- !u!4 &2051421212
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051421210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2051421213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051421210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 052d1ee767c68ce40b92671d5e1eabf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Options:
-    dllPathPattern: '{assets}/Plugins/espeak/__{name}'
-    assemblyPaths: []
-    loadingMode: 1
-    unixDlopenFlags: 1
-    threadSafe: 0
-    enableCrashLogs: 0
-    crashLogsDir: '{assets}/'
-    crashLogsStackTrace: 0
-    mockAllNativeFunctions: 1
-    onlyInEditor: 1
