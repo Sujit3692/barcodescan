@@ -265,8 +265,6 @@ MonoBehaviour:
   TextHeader: {fileID: 1184638579}
   Image: {fileID: 570292425}
   Audio: {fileID: 103870422}
-  m_Hypotheses: {fileID: 0}
-  m_Recognitions: {fileID: 0}
 --- !u!20 &103870419
 Camera:
   m_ObjectHideFlags: 0
@@ -1063,7 +1061,7 @@ GameObject:
   - component: {fileID: 1184638580}
   - component: {fileID: 1184638579}
   m_Layer: 0
-  m_Name: Text
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
