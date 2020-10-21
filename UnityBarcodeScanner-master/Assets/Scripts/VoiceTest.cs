@@ -131,6 +131,8 @@ public class VoiceTest : MonoBehaviour {
     void OnVoiceResult(string text)
     {
 		var matdocId = "";
+		int quan;
+		quan = Int16.Parse(text);
 		//TextHeader.text = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
 		
 		String username = "leusa";
@@ -152,8 +154,8 @@ public class VoiceTest : MonoBehaviour {
 		"\r\n\t\"BillOfLading\":\"\",\r\n\t\"GRGISlipNo\":\"\",\r\n\"HeaderText\":\"\",\r\n\"GoodsMovementRefDocType\":\"R10\",\r\n\"Tcode\":\"MIGO_TP\",\r\n\"Attachments\":[]," +
 		"\r\n\"MaterialDocumentItemsSet\":\r\n\t[\r\n\t\t{\r\n\t\t\t\"Material\":\"" + SimpleDemo.barcodevalue +
 		"\",\r\n\t\t\t\"ItemText\":\"" + SimpleDemo.desc +
-		"\",\r\n\t\t\t\"EntryQuantity\":\"1\"," +
-		"\r\n\t\t\t\"EntryUnitOfIssue\":\"KG\"," +
+		"\",\r\n\t\t\t\"EntryQuantity\":\"" + quan +
+		"\",\r\n\t\t\t\"EntryUnitOfIssue\":\"KG\"," +
 		"\r\n\t\t\t\"Recipient\":\"\",\r\n\t\t\t\"Plant\":\"3000\",\r\n\t\t\t\"ValuationType\":\"\"," +
 		"\r\n\t\t\t\"StorageLocation\":\"0001\"," +
 		"\r\n\t\t\t\"MovementType\":\"311\",\r\n\t\t\t\"NavSerial\":[],\r\n\t\t\t\"Batch\":\"\"," +
@@ -173,7 +175,7 @@ public class VoiceTest : MonoBehaviour {
 				Console.Out.WriteLine(e.Message);
 			}
 
-		uiText.text = "Material Document" + matdocId + "created successfully";
+		uiText.text = "Material Document " + matdocId + " created successfully";
 
 	}
 }
