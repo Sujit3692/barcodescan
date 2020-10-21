@@ -133,7 +133,7 @@ public class VoiceTest : MonoBehaviour {
 		var matdocId = "";
 		int quan;
 		quan = Int16.Parse(text);
-		//TextHeader.text = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
+		TextHeader.text = "Quantity Entered: " + quan;
 		
 		String username = "leusa";
 		String password = "chonflas";

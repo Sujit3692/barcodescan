@@ -10,14 +10,14 @@ public class Input : MonoBehaviour
 	public VoiceTest voicetest;
 	void Awake()
     {
-		var detail = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
-		uiText.text = detail;
+		/*var detail = "Material: " + SimpleDemo.barcodevalue + " \nDescription: " + SimpleDemo.desc;
+		uiText.text = detail;*/
 	}
 	// Start is called before the first frame update
 
 	void Start()
 	{
-		var detail = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
+		var detail = "Material: " + SimpleDemo.barcodevalue + " \nDescription: " + SimpleDemo.desc + " \nUnit of Measure: " + SimpleDemo.uom + " \nPlant: " + SimpleDemo.plant;
 		uiText.text = detail;
 		voicetest.GetSpeech();
 	}

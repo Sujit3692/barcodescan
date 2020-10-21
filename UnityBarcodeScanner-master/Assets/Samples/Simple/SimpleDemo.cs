@@ -162,6 +162,8 @@ public class SimpleDemo : MonoBehaviour
 	public static String CookieValue2;
 	public static String barcodevalue;
 	public static String desc;
+	public static String uom;
+	public static String plant;
 
 	/*[SerializeField]
 	private Text m_Hypotheses;
@@ -255,6 +257,8 @@ public class SimpleDemo : MonoBehaviour
 
 				barcodevalue = barCodeValue;
 				desc = details.d.results[0].Description;
+				uom = details.d.results[0].DefaultUnitOfMeasure;
+				plant = details.d.results[0].Plant;
 				TextHeader.text = barCodeValue + " / " + details.d.results[0].Description + " / " + details.d.results[0].DefaultUnitOfMeasure + " / " + details.d.results[0].Plant;
 				responseReader.Close();
 
