@@ -112,7 +112,7 @@ public class VoiceTest : MonoBehaviour {
 	VoiceController voiceController;
 
     public void GetSpeech() {
-		//TextHeader.text = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
+		
 		voiceController.GetSpeech();
     }
 
@@ -132,8 +132,7 @@ public class VoiceTest : MonoBehaviour {
     {
 		var matdocId = "";
 		//TextHeader.text = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
-		var detail = SimpleDemo.barcodevalue + " / " + SimpleDemo.desc;
-		uiText.text = detail;
+		
 		String username = "leusa";
 		String password = "chonflas";
 		//SimpleDemo demo = new SimpleDemo();
@@ -144,11 +143,8 @@ public class VoiceTest : MonoBehaviour {
 		var request1 = new RestRequest(Method.POST);
 		request1.AddHeader("ApiKey", "fkIpAYGzYjsGOsSgrpETyMsB2713EleR");
 		request1.AddHeader("Content-Type", "application/json");
-		//request1.AddHeader("X-CSRF-TOKEN", webResponse.Headers.Get("X-CSRF-TOKEN"));
 		request1.AddHeader("X-CSRF-TOKEN", SimpleDemo.token);
 		request1.AddHeader("Authorization", "Basic " + encoded);
-			//request1.AddCookie(webResponse.Cookies[0].Name, webResponse.Cookies[0].Value);
-			//request1.AddCookie(webResponse.Cookies[1].Name, webResponse.Cookies[1].Value);
 		request1.AddCookie(SimpleDemo.CookieName1, SimpleDemo.CookieValue1);
 		request1.AddCookie(SimpleDemo.CookieName2, SimpleDemo.CookieValue2);
 			request1.AddParameter
@@ -177,7 +173,7 @@ public class VoiceTest : MonoBehaviour {
 				Console.Out.WriteLine(e.Message);
 			}
 
-    uiText.text = matdocId;
+		uiText.text = "Material Document" + matdocId + "created successfully";
 
 	}
 }
